@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/25 09:57:41 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/01/29 03:07:55 by alopez-g         ###   ########.fr       */
+/*   Created: 2020/01/28 22:10:14 by alopez-g          #+#    #+#             */
+/*   Updated: 2020/01/29 01:56:35 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	int		aux;
-	size_t	i;
+	t_list	*new_list;
+	t_list	*new_list_aux;
 
-	i = 0;
-	if (haystack == needle)
-		return ((char *)haystack);
-	if (*needle == 0)
-		return ((char *)haystack);
-	if (len == 0)
+	if (!lst)
 		return (0);
-	while (*haystack && i < len)
+	aux = 0;
+	del = (void *)del;
+	new_list = ft_lstnew(f(lst->content));
+	new_list_aux = new_list;
+	while (lst)
 	{
-		aux = 0;
-		while (*(needle + aux) && *(haystack + aux)
-				&& *(haystack + aux) == *(needle + aux) && (i + aux) < len)
-			aux++;
-		if (!(*(needle + aux)))
-			return ((char *)haystack);
-		i++;
-		haystack++;
+		new_list->next = ft_lstnew(f(lst->content));
+		lst = lst->next;
+		new_list = new_list->next;
 	}
-	return (0);
+	return (new_list_aux);
 }

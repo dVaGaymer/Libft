@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 16:42:33 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/01/27 11:45:13 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/01/29 01:05:05 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char				*allocate_substr(char const *s, char c)
 	cnt = 0;
 	while (*(s + cnt) != c && *(s + cnt))
 		cnt++;
-	if (!(sub_splitted = (char *)malloc(sizeof(char) * cnt + 1)))
+	if (!(sub_splitted = (char *)malloc(sizeof(char) * (cnt + 1))))
 		return (0);
 	*(sub_splitted + cnt) = '\0';
 	cnt = 0;

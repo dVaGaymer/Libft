@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 08:29:45 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/01/27 13:27:45 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/01/29 02:20:19 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 		return (dst);
 	}
-	aux = -1;
-	while (++aux < len)
+	aux = 0;
+	while (aux < len)
+	{
 		*(unsigned char *)(dst + aux) = *(unsigned char *)(src + aux);
+		aux++;
+	}
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 10:39:45 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/01/27 14:14:59 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/01/29 04:05:13 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	len;
 
 	aux = 0;
+	if (!dst && ft_strlen(src) >= 0 && dstsize == 0)
+		return (ft_strlen(src) + dstsize);
 	if (dstsize <= ft_strlen(dst) || dstsize == 0 || !dst)
 		return (ft_strlen(src) + dstsize);
 	len = ft_strlen(dst);
@@ -28,7 +30,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		*(dst + aux) = *(src + aux);
 		aux++;
 	}
-	if (aux <= dstsize)
-		*(dst + aux) = 0;
+	*(dst + aux) = 0;
 	return (len + ft_strlen(src));
 }

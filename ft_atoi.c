@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 09:34:07 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/01/27 14:52:50 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/01/29 03:32:38 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,6 @@ int	ft_atoi(const char *str)
 	{
 		aux = aux * 10 + (*str - 48);
 		str++;
-		if (aux * sign > 2147483647)
-			return (-1);
-		if (aux * sign < -2147483648)
-			return (0);
 	}
-	return ((long)(aux * sign));
+	return ((int)(aux * sign));
 }

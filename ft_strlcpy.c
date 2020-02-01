@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 14:17:52 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/01/27 13:59:36 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/01/29 04:17:17 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	aux;
 
-	if (!dst || !src)
+	if (!dst)
 		return (0);
 	aux = 0;
 	if (dstsize == 0)

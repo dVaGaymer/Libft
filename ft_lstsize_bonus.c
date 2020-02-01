@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/25 08:09:22 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/01/29 02:15:15 by alopez-g         ###   ########.fr       */
+/*   Created: 2020/01/28 20:47:10 by alopez-g          #+#    #+#             */
+/*   Updated: 2020/01/28 22:55:15 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <string.h>
-
-void	ft_bzero(void *s, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	aux;
+	int	cnt;
 
-	aux = 0;
-	while (aux < n)
-		*(unsigned char *)(s + aux++) = 0;
+	cnt = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		cnt++;
+	}
+	return (cnt);
 }
