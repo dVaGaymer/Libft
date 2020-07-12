@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 08:06:08 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/11 18:03:47 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/07/12 02:55:18 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 void				ft_putnbr_fd(int n, int fd);
-char				*ft_itoab(size_t nbr, char *base);
+char				*ft_itoab(size_t n, char *base);
+char				*ft_itoab(size_t n, char *base);
 char				**ft_split(char const *s, char c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_itoa(int n);
