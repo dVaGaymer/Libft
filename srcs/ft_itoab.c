@@ -6,12 +6,23 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 16:17:32 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/17 15:52:01 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/07/17 16:02:59 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "../includes/libft.h"
+
+static int	base_digits(long n, int bs_cnt, char *base)
+{
+	char	dig;
+	int		aux;
+
+	aux = 0;
+	if (n >= bs_cnt)
+		aux = base_digits(n / bs_cnt, bs_cnt, base) + 1;
+	return (aux);
+}
 
 /*
 ** Function: check_repeated
@@ -106,15 +117,4 @@ char		*ft_itoab(size_t n, char *base)
 	if (base_cnt > 1 && valid && check_repeated(base, base_cnt))
 		str = to_base(n, base_cnt, base);
 	return (str);
-}
-
-int			base_digits(long n, int bs_cnt, char *base)
-{
-	char	dig;
-	int		aux;
-
-	aux = 0;
-	if (n >= bs_cnt)
-		aux = base_digits(n / bs_cnt, bs_cnt, base) + 1;
-	return (aux);
 }
