@@ -6,11 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 11:28:12 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/12 03:37:59 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:38:15 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <libft.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

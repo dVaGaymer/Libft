@@ -6,11 +6,13 @@
 #    By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/07 17:06:37 by aloez-g           #+#    #+#              #
-#    Updated: 2020/07/31 15:43:07 by alopez-g         ###   ########.fr        #
+#    Updated: 2020/08/09 23:36:11 by alopez-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS_DIR	= ./srcs/
+LIBFT_INC	=	./includes/
+
+SRCS_DIR	=	./srcs/
 SRCS		=	${SRCS_DIR}ft_memset.c ${SRCS_DIR}ft_bzero.c ${SRCS_DIR}ft_memcpy.c ${SRCS_DIR}ft_memccpy.c ${SRCS_DIR}ft_memmove.c ${SRCS_DIR}ft_memchr.c \
 				${SRCS_DIR}ft_memcmp.c ${SRCS_DIR}ft_strlen.c ${SRCS_DIR}ft_strlcpy.c ${SRCS_DIR}ft_strlcat.c ${SRCS_DIR}ft_strchr.c ${SRCS_DIR}ft_strrchr.c\
 				${SRCS_DIR}ft_strnstr.c ${SRCS_DIR}ft_strncmp.c ${SRCS_DIR}ft_atoi.c ${SRCS_DIR}ft_isalpha.c ${SRCS_DIR}ft_isdigit.c ${SRCS_DIR}ft_isalnum.c \
@@ -26,7 +28,7 @@ SRCS_BONUS	= 	${SRCS_DIR}ft_lstnew_bonus.c ${SRCS_DIR}ft_lstadd_front_bonus.c ${
 OBJS_BONUS 	= 	${SRCS_BONUS:.c=.o}
 
 %.o : %.c
-				clang -Wall -Werror -Wextra -I $(FTPF_INC) -I $(LIBFT_INC) -c $< -o $@
+				clang -Wall -Werror -Wextra -I $(LIBFT_INC) -c $< -o $@
 
 NAME		= 	libft.a
 

@@ -6,11 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 08:22:16 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/07 17:15:14 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:37:26 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <libft.h>
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

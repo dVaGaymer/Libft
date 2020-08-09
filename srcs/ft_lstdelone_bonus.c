@@ -6,11 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 21:20:07 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/07 17:15:05 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:37:11 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <libft.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

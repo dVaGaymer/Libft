@@ -6,11 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 13:22:50 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/11 19:45:24 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:37:04 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <libft.h>
 
 static int	digit(int n)
 {

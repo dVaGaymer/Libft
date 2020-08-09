@@ -6,12 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 16:17:32 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/31 15:41:46 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:38:33 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "../includes/libft.h"
+#include <libft.h>
 
 static int	base_digits(unsigned long n, int bs_cnt, char *base)
 {

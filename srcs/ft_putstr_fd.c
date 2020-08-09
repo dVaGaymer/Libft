@@ -6,11 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 10:56:24 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/07 17:15:26 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:37:45 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <libft.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

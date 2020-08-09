@@ -6,11 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 10:31:42 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/12 04:15:24 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:37:54 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <libft.h>
 
 char	*ft_strdup(const char *s1)
 {

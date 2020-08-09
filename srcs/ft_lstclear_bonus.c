@@ -6,11 +6,11 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 21:28:17 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/07/07 17:15:04 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/09 23:37:09 by alopez-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <libft.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
