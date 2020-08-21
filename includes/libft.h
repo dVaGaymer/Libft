@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 08:06:08 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/08/21 12:19:31 by dvagaymer        ###   ########.fr       */
+/*   Updated: 2020/08/21 12:22:33 by dvagaymer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int					ft_toupper(int c);
 int					ft_isspace(int c);
 int					ft_tolower(int c);
 int					ft_isprint(int c);
+int					ft_isspace(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isalpha(int c);
