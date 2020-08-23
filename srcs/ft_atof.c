@@ -6,7 +6,7 @@
 /*   By: alopez-g <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 17:48:07 by alopez-g          #+#    #+#             */
-/*   Updated: 2020/08/19 17:48:44 by alopez-g         ###   ########.fr       */
+/*   Updated: 2020/08/23 11:39:59 by dvagaymer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,27 @@ static	int	digit(int n)
 float	ft_atof(const char *str)
 {
 	float	num;
-	float	aux;
+	float	dnum;
+	int	sign;
 	int	d;
 
-	num = ft_atoi(str);
-	if (!ft_strchr(str, '.'))
-		return ((float)ft_atoi(str));
-	if (!ft_isdigit(*(ft_strchr(str, '.') + 1)))
-		return (0);
-	aux = ft_atoi(ft_strchr(str, '.') + 1);
-	d = digit(aux);
+	num = 0;
+	dnum = 0;
+	sign = 1;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
+		sign = *str++ == '-' ? -1 : 1;
+	while (ft_isdigit(*str))
+	{
+		num = num * 10 + (*str - 48);
+		str++;
+	}
+	str = *str == '.' ? str + 1 : str;
+	if (ft_isdigit(*str))
+		dnum = ft_atoi(str);;
+	d = digit(dnum);
 	while (d-- > 0)
-		aux /= 10; 
-	num = num < 0 ? num - aux : num + aux;
-	return (num);
+		dnum = dnum / 10;
+	return (sign * (num + dnum));
 }
